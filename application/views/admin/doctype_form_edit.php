@@ -1,0 +1,31 @@
+<section class="container py-4 ">
+    <div class="card shadow border-0 p-3 ">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>Edit Document type</h4>
+                <hr>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6">
+                <form action="<?php echo site_url('doctypecontroller/update') ?>" method="post">
+                    <div class="mb-3">
+                        <label for="doctype name" class="form-label">Document type name</label>
+                        <input type="text" class="form-control" name="d_name" value="<?php echo $doctype->d_name ?>" reauired>
+                        <input type="hidden" value="<?php echo $doctype->d_id ?>" name="d_id">
+                    </div>
+                    <button type="submit" class="btn btn-success text-white me-1">
+                        <i class="fas fa-save me-1"></i>
+                        save
+                    </button>
+                    <button type="button" class="btn bg-danger">
+                        <a href="<?php echo site_url('doctypecontroller') ?>" class="text-white">
+                            <i class="fas fa-times-circle me-1"></i>
+                            cancle
+                        </a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
